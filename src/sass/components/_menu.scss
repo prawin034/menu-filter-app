@@ -1,0 +1,149 @@
+.menu {
+  width: 100rem;
+  margin: 5rem auto;
+
+  &_titlebox {
+    text-align: center;
+  }
+  &_title {
+    font-size: 5rem;
+    color: #1098ad;
+    text-transform: uppercase;
+    display: inline-block;
+
+    &:hover {
+      transform: skewY(7deg);
+      cursor: pointer;
+    }
+  }
+  &_underline {
+    border-bottom: 5px solid rgb(183, 188, 180);
+    width: 10rem;
+    margin: 0 auto;
+  }
+
+  &_box {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    align-items: start;
+    justify-items: stretch;
+    gap: 5rem;
+
+    @include respond(TAB) {
+      grid-template-columns: 500px;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+    }
+  }
+
+  &_article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    @include respond(TAB) {
+      gap: 3rem;
+    }
+
+    &_img {
+      width: 20rem;
+      height: 17rem;
+      outline: 5px solid #ada010;
+      margin-bottom: 1rem;
+      @include respond(TAB) {
+        width: 20rem;
+        height: 20rem;
+      }
+    }
+
+    &_minibox {
+      &_title {
+        font-size: 1.5rem;
+        color: #ada010;
+        font-weight: bold;
+        text-transform: capitalize;
+        @include respond(TAB) {
+          font-size: 2.3rem;
+        }
+      }
+      &_price {
+        font-size: 2rem;
+        color: #1098ad;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include respond(TAB) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    &_desc {
+      margin-top: 2rem;
+      font-size: 1.9rem;
+      color: #0e406d;
+      font-weight: 900;
+      text-transform: capitalize;
+      text-align: justify;
+      @include respond(TAB) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #1098ad;
+}
+
+.btn_container {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  &_btn {
+    background: none;
+    border: none;
+    border-bottom: 3px solid #0e406d;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    color: #1098ad;
+    cursor: pointer;
+    transition: all 1s;
+    text-transform: capitalize;
+
+    &:hover,
+    .active {
+      background-color: #666;
+      color: white;
+    }
+  }
+}
+
+.list a:hover,
+.list a.active {
+  background-color: #ada010;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active,
+.btn:hover {
+  color: white;
+  background-color: #0e406d;
+}
